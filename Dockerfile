@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:focal
+FROM mcr.microsoft.com/playwright:noble
 
 RUN mkdir /opt/html2pdf/
 
