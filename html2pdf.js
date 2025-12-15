@@ -5,7 +5,7 @@
 const http       = require('http');
 const playwright = require('playwright');
 const fs         = require('fs');
-const uuid       = require('uuid');
+const { randomUUID } = require('crypto');
 
 const host = '0.0.0.0';
 const port = '8080';
@@ -55,7 +55,7 @@ const createPdf = async function ( res, html ) {
         return;
     }
 
-    let filename = '/tmp/' + uuid.v4();
+    let filename = '/tmp/' + randomUUID();
 
     console.debug('filename: ' + filename);
 

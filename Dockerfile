@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/playwright:focal
+FROM mcr.microsoft.com/playwright:noble
 
 RUN mkdir /opt/html2pdf/
 
 RUN chdir /opt/html2pdf && \
-  npm install playwright uuid && \
+  npm install playwright && \
   npx playwright install
 
 COPY html2pdf.js /opt/html2pdf/html2pdf.js
